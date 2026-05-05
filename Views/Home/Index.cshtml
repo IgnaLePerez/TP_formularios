@@ -2,7 +2,42 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<form action="@Url.Action("VerificarDatos", "Home")" method = "POST" enctype = "application/x-www-form-urlencoded"> 
+    <h2>Datos personales:</h2>
+    
+    <p>Nombre completo: </p> <input type="text" name="nombreCompleto">
+    <p>Edad: </p> <input type="number" name="edad">
+    <p>DNI: </p> <input type="number" name="dni">
+    
+    <h2>Situacion laboral:</h2>
+    
+    <p>¿Actualmente trabaja?</p>
+    Si <input type="radio" name="situacionLaboral" value=true>
+    No <input type="radio" name="situacionLaboral" value=false>
+
+    <p>Tipo de empleo:</p>
+    <select name = "tipoDeEmpleo">
+        <option value="1">Relación de dependencia</option>
+        <option value="2">Monotributista</option>
+        <option value="3">Autónomo</option>
+        <option value="4">Desempleado</option>
+    </select>
+
+    <h2>Información económica:</h2>
+
+    <p>Ingreso mensual: </p> <input type="number" name="ingresoMensual">
+
+    <p>¿Posee otras deudas?</p>
+
+    Si <input type="radio" name="deudas" value=true>
+    No <input type="radio" name="deudas" value=false>
+
+    <p> En caso de ser afirmativo, seleccionew cuales: </p>
+
+    Si <input type="checkbox" tipoDeuda1="Tarjeta de crédito" >
+    No <input type="checkbox" name="deudas" value=false>   
+
+
+    <h2>Condiciones del préstamo:</h2>
+    <h2>Confirmación:</h2>
+</form>
