@@ -32,12 +32,25 @@
     Si <input type="radio" name="deudas" value=true>
     No <input type="radio" name="deudas" value=false>
 
-    <p> En caso de ser afirmativo, seleccionew cuales: </p>
+    <p> En caso de ser afirmativo, seleccione cuales: </p>
 
-    Si <input type="checkbox" tipoDeuda1="Tarjeta de crédito" >
-    No <input type="checkbox" name="deudas" value=false>   
-
+    Tarjeta de crédito <input type="checkbox" name="tarjetaDeCredito" value = true >
+    Préstamo Bancario <input type="checkbox" name="prestamoBancario" value = true >    
+    Préstamo Informal <input type="checkbox" name="prestamoInformal" value = true >
 
     <h2>Condiciones del préstamo:</h2>
+
+    <p>Monto Solicitado: </p> <input type="number" name="montoSolicitado">
+    
+    <p>Plazo de devolución:</p>
+    <select name = "plazo">
+        <option value="6">6 meses</option>
+        <option value="12">12 meses</option>
+        <option value="24">24 meses</option>
+    </select>
+    
     <h2>Confirmación:</h2>
+    Acepta términos y condiciones: <input type="checkbox" name="terminosYCondiciones" value = true >
+
+    <input type="submit" name="submit">
 </form>
